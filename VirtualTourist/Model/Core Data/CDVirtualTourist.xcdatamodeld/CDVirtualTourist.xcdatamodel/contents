@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ImageFlickr" representedClassName="ImageFlickr" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="flickrImage" inverseEntity="Location"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="flickrImage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImageFlickr" inverseName="location" inverseEntity="ImageFlickr"/>
+    </entity>
+    <elements>
+        <element name="ImageFlickr" positionX="-49.4893798828125" positionY="401.2705688476562" width="128" height="74"/>
+        <element name="Location" positionX="-322.6082763671875" positionY="401.7098388671875" width="128" height="88"/>
+    </elements>
+</model>
